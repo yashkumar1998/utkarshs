@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+
+// Call,apply and bind
+// we can manually set the value of "this" keyword  using "CAB"
+
+// let name= {
+//     fname:"yashpx00px00px0",
+//     lname:"kumar",
+//     get: function(a,b){
+//         console.log(this.fname + " " + this.lname,a,b);
+//     }
+// }
+// name.get("hii","not here");
+// let name2 = {
+//     fname:"rahul",
+//     lname:"yadav"
+    
+// }
+// function borrowing
+
+// call
+// name.get.call(name2,"here","in mumbai");
+
+// apply
+// name.get.apply(name2, ["here","in haryana"]);
+
+// bind 
+    //  let set = name.get.bind(name2,"here","in gurgaon");
+    // //  console.log(set);
+    //  set();
+
+
+    // for loop: is used to iterate over properties of an object
+
+    // let person ={
+    //     name:"yash",
+    //     age: 24,
+    //     occupation:"developer"
+    // }
+
+    // for(let key in person){
+    //     console.log(key + ':' + person[key]);
+    // }
+   //[1*1 + 1*2 + 1*3 +1*4 + 1*5]  ==>[15,30,]
+//    let arr= [1, 2, 3, 4, 5];
+//    let set = [];
+   
+//    for(let i=0; i<arr.length;i++){
+//      let res = 0;
+//     for(let j=0; j<arr.length;j++){
+//        res = res + (arr[i]*arr[j]);
+//     }
+//      set.push(res);
+//    }
+
+//    console.log(set);
+
+
+   let arr = [1, 2, 3, 4, 5]
+
+   let set = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        let get = arr[i];
+        let temp = 0;
+        for (let ix = 0; ix < arr.length; ix++) {
+            const element = arr[ix];
+            temp += get * element;      
+        }
+        console.log(temp);
+        arr[i] = temp;
+        // set.push(temp);
+    }
+    console.log(set);
+    console.log(object)
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

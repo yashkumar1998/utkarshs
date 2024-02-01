@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+// function decleration
+
+// function sum(a){
+//     console.log("hi"+ " " + a); 
+// }
+// sum("utkarsh");
+
+// function expression
+
+// let set = function(){
+//     console.log("hello");
+// }
+// set();
+
+
+// Arrow function
+
+// let set = function(a){
+//     console.log("hello " + a);
+// }
+
+// let set = (a,b)=>{
+//     console.log("hello " + a + b);
+// }
+// set("rahul","roy");
+
+
+// higher order function 
+
+// passing function as an argument(callback functions);
+
+// let str = function(a){
+//     console.log(a.toUpperCase());
+// }
+
+// let dtr = function(b){
+//     console.log(b.toLowerCase());
+// }
+
+// let get = function(c,d){
+//     console.log(d(c));  //str("hello");
+// }
+// get("HEllo",dtr)
+
+
+// function greet(a){
+//   console.log(a)
+
+// }
+
+// function set(a,b){
+//     console.log("hello, " + a);
+//     b(a);
+// }
+// set("yash",greet);
+
+
+// function get(b){
+// b(10);
+// }
+
+// function set(a){
+//     console.log(a);   
+// }
+// get(set);
+
+
+
+
+// function returning another function
+
+// let comp = function(a){
+//     console.log(b + ""+c);
+//   return function(b){
+//       return function(c){
+//         console.log(a + " " + b + c);
+//       }
+//   }
+// }
+
+// comp("hello")("world")("hii");
+
+
+
+// closures
+
+function x(){
+    var a = 7;
+    console.log("hello");
+    function y(){
+        console.log(a);
+    }
+    return y;
+}
+
+// x()()()();
+
+// second method
+let z = x()();
+// z();
+console.log(z);
+
+
+    </script>
+</body>
+</html>

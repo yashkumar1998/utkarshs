@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 20vh;
+            width: 50vh;
+            border: 1px solid grey;
+            margin: auto;
+            padding: 30px;
+        }
+
+        #non{
+            width: 60%;
+            height: 25px;
+            padding: 10px;
+        }
+        .rem{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul class="set"></ul>
+        <input type="text" id="non">
+        <input type="button" value="store" id="btn" onclick="add()">
+        <span id="hel"></span>
+    </div>
+
+    <script>
+            function add(){
+                let text = document.querySelector("#non").value;
+                if(text==""){
+                     document.querySelector("#hel").innerHTML = "enter value";
+                }else{
+                    let set = document.querySelector(".set");
+                    let li = document.createElement("li");
+                    li.textContent = text;
+                    let a = document.createElement("a");
+                    a.textContent = "x";
+                    a.href = "#";
+                    a.className="rem"
+                    li.appendChild(a);
+
+                    set.prepend(li);
+                }
+                document.querySelector("#non").value = "";
+            }
+
+            let ul = document.querySelector("ul");
+            ul.addEventListener("click", function(e){
+                  let set = document.querySelector(".set");
+                  let li = e.target.parentNode;
+                  console.log(li);
+                  set.removeChild(li);
+            })
+    </script>
+</body>
+</html>
